@@ -10,22 +10,27 @@ class Snake:
         self.snake_length_y = [self.y]
         self.last_move_y = 1
         self.last_move_x = 1
+        self.snake_moved = False
         
     def move_up(self):
         self.snake_length_y[0] -= 1
         self.last_move_y = -1
+        self.snake_moved = True
 
     def move_down(self):
         self.snake_length_y[0] += 1
         self.last_move_y = 1
+        self.snake_moved = True
 
     def move_right(self):
         self.snake_length_x[0] += 1
         self.last_move_x = 1
+        self.snake_moved = True
 
     def move_left(self):
         self.snake_length_x[0] -= 1
         self.last_move_x = -1
+        self.snake_moved = True
 
     def snake_mover(self):
         for i in range(1, self.snake_length):

@@ -17,7 +17,7 @@ while snake.snake_life:
         snake.snake_length_x.append(copy.deepcopy(copy_x))
         snake.snake_length_y.append(copy.deepcopy(copy_y))
     print(apple.score)
-    snake_moved = False
+    snake.snake_moved = False
     for i in lines_array:
         for y in snake.snake_length_y:
             for x in snake.snake_length_x:
@@ -32,28 +32,24 @@ while snake.snake_life:
     copy_x = copy.deepcopy(snake.snake_length_x[snake.snake_length])
     copy_y = copy.deepcopy(snake.snake_length_y[snake.snake_length])
 
-    
-    while not snake_moved:
+
+    while not snake.snake_moved:
         if m == "left":
             lines_array[copy_y][copy_x] = "*"
             snake.move_left()
             last_movement = m
-            snake_moved = True
         elif m == "right":
             lines_array[copy_y][copy_x] = "*"
             snake.move_right()
             last_movement = m
-            snake_moved = True
         elif m == "up":
             lines_array[copy_y][copy_x] = "*"
             snake.move_up()
             last_movement = m
-            snake_moved = True
         elif m == "down":
             lines_array[copy_y][copy_x] = "*"
             snake.move_down()
             last_movement = m
-            snake_moved = True
         else:
             m = last_movement
         snake.snake_mover()

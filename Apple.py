@@ -17,4 +17,4 @@ class Apple:
         self.x = random.randint(-1, FIELD)
         self.y = random.randint(-1, FIELD)
         self.score += 1
-        self.snake.snake_length += 1
+        snake.snake_length += 1

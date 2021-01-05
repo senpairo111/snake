@@ -5,16 +5,17 @@ from settings import FIELD
 # Global Variables
 snake = Snake()
 
+
 # Apple Class
 class Apple:
     def __init__(self):
-        self.x = random.randint(-1, FIELD)
-        self.y = random.randint(-1, FIELD)
+        self.__locator()
         self.score = 0
 
+    def __locator(self):
+        self.x = random.randint(-1, FIELD - 1)
+        self.y = random.randint(-1, FIELD - 1)
 
     def eaten(self):
-        self.x = random.randint(-1, FIELD)
-        self.y = random.randint(-1, FIELD)
+        self.__locator()
         self.score += 1
-        snake.snake_length += 1

@@ -8,6 +8,6 @@
 - Play Game
 
 # Devs:
-- Nadav Hamagniv
+- Nadav The L Taker
 - Barzuka1 
 - Ah shel nadav
